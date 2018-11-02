@@ -1,5 +1,19 @@
 # chip8-emulator
 
+## Getting Started
+### Dependencies
+
+Have `npm` and `node js` installed
+
+Npm will do the rest
+
+### 3 Steps to get up and running
+* run `npm install` via command line in the project directory
+* run `npm run serve` to build and serve
+* open `localhost:8080` in your browser
+
+# Default Vue Readme
+
 ## Project setup
 ```
 npm install

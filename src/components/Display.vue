@@ -1,8 +1,15 @@
 <template>
   <div>
-    <input type="number" v-model="zoom" min="1" max="12" value="1">
-    <canvas id="myCanvas" :width="zoomWidth" :height="zoomHeight" style="border:1px solid #000000;">
-    </canvas>
+    <div class="ui-menu">
+      <!-- <select v-model="zoom">
+      <option value=12>Big</option>
+      <option value=6>Small</option>
+    </select> -->
+    </div>
+    <div class="ui-child">
+      <canvas id="myCanvas" style="border:1px solid #000000;">
+      </canvas>
+    </div>
   </div>
 </template>
 
@@ -17,7 +24,7 @@ export default {
       dispWidth: 64,
       dispHeight: 32,
       dispBuff: null,
-      zoom: 1
+      zoom: 12
     };
   },
   computed: {
@@ -30,7 +37,14 @@ export default {
   },
   mounted: function() {
     // Set the array length and fill it with 0s
-    this.dispBuff = Array(this.dispWidth * this.dispHeight).fill(0);
+    this.dispBuff = Array(this.dispWidth * this.dispHeight).fill(1);
   }
 };
 </script>
+
+<style scoped>
+canvas {
+  width: 100%;
+  height: 100%;
+}
+</style>
