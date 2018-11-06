@@ -3,11 +3,13 @@
     <div class="ui-child">
       <canvas id="emuCanvas" :width="dispWidth" :height="dispHeight" style="border:1px solid #000000;">
       </canvas>
-      <button @click="updateDisplay">Update</button>
-      <input v-model="tempX" type="number">
-      <input v-model="tempY" type="number">
-      <input v-model="tempVal" type="number">
-      <button @click="putPixel">Put</button>
+      <div>
+        <button @click="updateDisplay">Update</button>
+        <input v-model="tempX" type="number">
+        <input v-model="tempY" type="number">
+        <input v-model="tempVal" type="number">
+        <button @click="putPixel">Draw</button>
+      </div>
     </div>
   </div>
 </template>
@@ -99,7 +101,29 @@ export default {
 
 <style scoped>
 canvas {
-  min-width: 100%;
-  min-height: 100%;
+  min-width: 640px;
+  min-height: 320px;
+  /* justify-self: center; */
+}
+
+.ui-child {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+input {
+  border-radius: 0.5em;
+  max-height: 2em;
+  border: none;
+  padding: 0.5em;
+}
+
+button {
+  border-radius: 0.5em;
+  height: auto;
+  width: auto;
+  border: none;
+  outline: 0;
 }
 </style>

@@ -18,6 +18,15 @@
 
         </display>
       </template>
+
+      <template slot="sidebar-left">
+        <RomBrowser></RomBrowser>
+      </template>
+      
+      <template slot="sidebar-right">
+        <GamepadUI></GamepadUI>
+      </template>
+      
     </layout>
   </div>
 </template>
@@ -25,12 +34,16 @@
 <script>
 import Layout from "./components/Layout.vue";
 import Display from "./components/Display.vue";
+import RomBrowser from "./components/RomBrowser.vue";
+import GamepadUI from "./components/GamepadUI.vue";
 
 export default {
   name: "app",
   components: {
     Layout,
-    Display
+    Display,
+    RomBrowser,
+    GamepadUI
   }
 };
 </script>

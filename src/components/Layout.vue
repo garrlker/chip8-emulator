@@ -7,7 +7,9 @@
         </slot>
       </div>
       <div class="sidebar-left">
-        Sidebar Left
+        <slot name="sidebar-left">
+
+        </slot>
       </div>
 
       <div class="toolbar">
@@ -15,13 +17,17 @@
       </div>
 
       <div class="sidebar-right">
-        Sidebar Right
+        <slot name="sidebar-right">
+
+        </slot>
       </div>
+
       <div class="emuDisplay">
         <slot name="display">
 
         </slot>
       </div>
+
       <div class="footer">
         Footer
       </div>
